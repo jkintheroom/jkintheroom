@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>text Home</title>
+		<style>
+			#input:focus {
+				outline: none !important;
+			}
+			#sltor:focus{
+				outline: none !important;
+			}
+		</style>
+		<script src="search.js"></script>
+		<script>
+		document.onkeydown = function(event) {
+			if(inputfcs&&event.keyCode==13){
+				search();
+			}
+		}
+			function search() {
+				var slc=document.getElementById("sltor");
+				var input = document.getElementById("input");
+				if(slc.value=="百度"){
+					window.open("https://www.baidu.com/s?wd="+input.value,"_blank")
+				}
+				if(slc.value=="官网"){
+					list.forEach(function(value, index, array) {
+						var bl=false;
+						if(Array.isArray(value[0])){
+							value[0].forEach(function(v, i, a) {
+								bl=(bl||v==input.value.toLowerCase());
+							});
+						}
+						else bl=value[0]==input.value;
+						if(bl){
+							window.open(value[1],"_blank")
+						}
+					})
+				}
+				input.blur();
+				
+			}
+			var inputfcs=false;
+			function infocus(){
+				var infcs=document.getElementById("inputdiv");
+				infcs.style.border="2px solid #0000FF";
+				infcs.style.boxShadow="0 0 10px #6b8bce";
+				inputfcs=true;
+				
+			}
+			function outFocus(){
+				var infcs=document.getElementById("inputdiv");
+				infcs.style.border="2px solid #c4c7ce";
+				infcs.style.boxShadow="";
+				inputfcs=false;
+			}
+		</script>
+	</head>
+	<body>
+		<div style="margin-top: 100px;margin-left: 100px;height: 200px;background-color: #aace8f;margin-right: 100px;">
+			<a href="./texter/index.html" target="_blank">
+				<div href="./texter/index.html" id="selector"
+					style="width: 50px;height: 50px;margin-left: 50px;margin-top: 0px;border-top-width: 10px;padding-top: 20px;">
+					<img src="../img/text1.webp" alt="Smiley face" style="width: 50px;height: 50px;">
+					<p style="margin-top: 0px;margin-bottom: 0px;">快捷键text</p>
+				</div>
+			</a>
+		</div>
+		
+		<div style="margin-top: 50px;height: 50px;">
+			<div id="inputdiv" style="float: right ;border-radius: 10px 0 0 10px;border: 2px solid #c4c7ce;position: absolute;left: 50%;margin-left: -350;">
+				<select id="sltor" style="width: 62px;border: 0;margin-top: 15px;    color: #9195a3;">
+					<option value="官网">官网</option>
+					<option value ="百度">百度</option>
+				</select>
+				<input id="input" onfocus="infocus()" onfocusout="outFocus()" value=""
+					style="height: 46px;width: 548px;vertical-align:top;border: 0;border-radius: 10px;" />
+				
+			</div>
+			<button type="button" onclick="search()"
+				style="border-radius: 10px;height: 50px;width: 76px;border-radius: 0 10px 10px 0;background-color: #4e6ef2;border: 0;margin-left: -10;font-size: 17px;color: #fff;cursor: pointer;margin-left: 260px;position: absolute;left: 50%;">搜索</button>
+		</div>
+		
+
+
+	</body>
+</html>
