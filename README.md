@@ -1,15 +1,15 @@
 <h2>目录</h2>
-<h3>一、[python使用功能介绍](#index1)<br><br>
-二、[Java 示例](#index2)</h3>
-<br>
+<h3>一、[python使用功能介绍]<br/><br/>
+二、[Java 示例]</h3>
 本程序支持注释
 <h3 id='index1'>python使用功能介绍</h3>
-python示例
-<br>
+<p>python示例</p>
+<p>
 本程序支持注释
 运行代码会生成python代码到t.py文件当中 同时生成c.cmd文件直接通过os.system执行 
-可以在下方面控制台板上看到t.py文件的打印输出
-```python
+可以在下方面控制台板上看到t.py文件的打印输出</p>
+
+```
 sn = 0 5 3 3 1
 e sn #其中 e 代表foreach 类似 for n in sn
     n++ #添加 n++ 功能
@@ -22,8 +22,9 @@ def sh(sn):
         p n 
 sh(n)
 ```
+
 最新功能示例
-```python
+```
 w = 0w0 0o0 0v0 0u0 0j0 0-0 0_0 0n0 0m0 0A0 QvQ :D ヾ(≧▽≦*)o （￣︶￣）↗　#等于号后加空格
 s = /0 w 0 2 "ok" #s=[0,w,0,2,"ok"]
 r; #替换为def r(): 例如 r;x,y 为 def r(x,y):
@@ -35,7 +36,7 @@ p str(i "y=")
 p [n e w]
 ```
 函数应用
-```python
+```
 erjinzhi;
     o=0
     po=[["0" e 3]e 8]
@@ -143,13 +144,13 @@ fin;a,b #if a in b
             p 0
     return False
 ```
-代码中将cg = {".rp": ".replace", ".sp": ".strip", ".id": ".index", ".sl": ".split",".l":".__len__",".fd":".find"}
-这些功能进行替换 例如a=1b13 a=a.rp("1","0") 则a为0b03
+<p>代码中将cg = {".rp": ".replace", ".sp": ".strip", ".id": ".index", ".sl": ".split",".l":".__len__",".fd":".find"}
+这些功能进行替换 例如a=1b13 a=a.rp("1","0") 则a为0b03</p>
 
 <h3 id='index2'>Java 示例</h3>
-本程序支持注释<br>
-代码
-```python
+<p>本程序支持注释 代码：</p>
+
+```
 n = ["s","ff","gg"]#自动生成 String[] n=["fsd","sdf"]
 void sh(S[] sn){#S会替换为String
     e 6#for(i=0;i<6;i++)
@@ -159,8 +160,9 @@ void sh(S[] sn){#S会替换为String
 }
 sh(n);#未定义功能不会加分号
 ```
-最新功能展示
-```python
+<p>最新功能展示</p>
+
+```
 public class t{
     void cg(int x,int y)
     {
